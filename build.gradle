@@ -52,8 +52,8 @@ dependencies {
     include 'com.github.P03W:Microconfig:2.0.1'
 
     // Ne-V-Seti
-    modImplementation 'me.basiqueevangelist:ne-v-seti:0.1.5-1.17-pre1'
-    include 'me.basiqueevangelist:ne-v-seti:0.1.5-1.17-pre1'
+    modImplementation 'me.basiqueevangelist:ne-v-seti:0.1.6-1.17'
+    include 'me.basiqueevangelist:ne-v-seti:0.1.6-1.17'
 
     // QueCee
     modImplementation 'com.github.p03w:quecee:2.0.1'
