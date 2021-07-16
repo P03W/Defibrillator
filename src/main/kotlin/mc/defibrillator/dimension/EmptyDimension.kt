@@ -25,7 +25,7 @@ import net.minecraft.world.gen.chunk.ChunkGenerator
 
 
 object EmptyDimension {
-    val DIMENSION_KEY: RegistryKey<DimensionOptions> = RegistryKey.of(
+    private val DIMENSION_KEY: RegistryKey<DimensionOptions> = RegistryKey.of(
         Registry.DIMENSION_KEY,
         Identifier("defib", "void")
     )
@@ -48,7 +48,7 @@ object EmptyDimension {
 
     fun join(context: CommandContext<ServerCommandSource>): Int {
         val player = context.source.player
-        val modWorld: ServerWorld = context.source.minecraftServer.getWorld(WORLD_KEY)!!
+        val modWorld: ServerWorld = context.source.server.getWorld(WORLD_KEY)!!
 
         val target = TeleportTarget(Vec3d(0.5, 101.0, 0.5), Vec3d.ZERO, 0.0F, 0.0F)
         FabricDimensions.teleport(player, modWorld, target)

@@ -6,6 +6,7 @@
 
 package mc.defibrillator
 
+import it.unimi.dsi.fastutil.longs.Long2IntArrayMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import mc.defibrillator.gui.data.AdvancementMenuState
@@ -34,4 +35,6 @@ object DefibState {
     // Frozen entities
     @JvmField
     val suppressedEntities: HashMap<Entity, Int> = hashMapOf()
+    @JvmField
+    val suppressedBlockEntities = Long2IntArrayMap()
 }

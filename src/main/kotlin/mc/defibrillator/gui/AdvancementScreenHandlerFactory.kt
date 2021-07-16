@@ -9,9 +9,6 @@ package mc.defibrillator.gui
 import mc.defibrillator.DefibState
 import mc.defibrillator.gui.data.AdvancementMenuState
 import mc.defibrillator.gui.util.TexturingConstants
-import mc.defibrillator.util.applySkull
-import mc.defibrillator.util.withGlint
-import mc.defibrillator.util.withLore
 import me.basiqueevangelist.nevseti.OfflineAdvancementCache
 import net.minecraft.item.ItemStack
 import net.minecraft.item.Items
@@ -24,7 +21,10 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.Util
 import org.github.p03w.quecee.api.gui.QueCeeHandlerFactory
 import org.github.p03w.quecee.api.gui.inventory.ItemActionMap
+import org.github.p03w.quecee.api.util.applySkull
 import org.github.p03w.quecee.api.util.guiStack
+import org.github.p03w.quecee.api.util.withGlint
+import org.github.p03w.quecee.api.util.withLore
 import org.github.p03w.quecee.util.GuiAction
 
 class AdvancementScreenHandlerFactory(

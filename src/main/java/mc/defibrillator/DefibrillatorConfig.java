@@ -40,6 +40,9 @@ public class DefibrillatorConfig implements ConfigData {
     public static class CrashConfig implements ConfigData {
         @Comment("If entities that cause a crash should be prevented from ticking")
         public boolean autoPauseCrashingEntities = false;
+    
+        @Comment("If ticking block entities that cause a crash should be prevented from ticking")
+        public boolean autoPauseCrashingBlocks = false;
         
         @Comment("How long until frozen objects are unfrozen automatically in attempted ticks, -1 to disable auto retry")
         public int retryDelay = 200;

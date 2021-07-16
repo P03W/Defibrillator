@@ -25,7 +25,10 @@ import net.minecraft.util.Formatting
 import net.minecraft.util.Util
 import org.github.p03w.quecee.api.gui.QueCeeHandlerFactory
 import org.github.p03w.quecee.api.gui.inventory.ItemActionMap
+import org.github.p03w.quecee.api.util.applySkull
 import org.github.p03w.quecee.api.util.guiStack
+import org.github.p03w.quecee.api.util.withGlint
+import org.github.p03w.quecee.api.util.withLore
 import kotlin.time.ExperimentalTime
 
 class NBTScreenHandlerFactory(

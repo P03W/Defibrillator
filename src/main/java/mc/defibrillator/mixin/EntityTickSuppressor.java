@@ -21,7 +21,7 @@ import java.util.function.Consumer;
 @Mixin(World.class)
 public class EntityTickSuppressor {
     /**
-     * The alternative here is 2-3 short circuit injects, so this is much cleaner overall
+     * @reason The alternative here is 2-3 short circuit injects, so this is much cleaner overall
      *
      * @author P03W
      */
