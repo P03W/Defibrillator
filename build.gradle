@@ -20,6 +20,7 @@ repositories {
         name 'Jitpack'
         url 'https://jitpack.io'
     }
+    maven { url = "https://api.modrinth.com/maven" }
     maven {
         name = 'Ladysnake Mods'
         url = 'https://ladysnake.jfrog.io/artifactory/mods'
@@ -44,8 +45,15 @@ dependencies {
     modImplementation "net.fabricmc:fabric-language-kotlin:1.6.0+kotlin.1.5.0"
 
     // Aegis
-    modImplementation 'com.github.P03W:Aegis:3.0.0'
-    include 'com.github.P03W:Aegis:3.0.0'
+    modImplementation "maven.modrinth:aegis:3.2.5"
+    include ("maven.modrinth:aegis:3.2.5") {
+        artifact {
+            name = 'aegis-runtime'
+            extension = 'jar'
+            type = 'jar'
+            url = "https://api.modrinth.com/maven/maven/modrinth/aegis/3.2.5/aegis-runtime-3.2.5.jar"
+        }
+    }
 
     // Microconfig
     modImplementation 'com.github.P03W:Microconfig:2.0.1'

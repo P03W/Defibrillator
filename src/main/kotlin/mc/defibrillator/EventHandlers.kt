@@ -231,7 +231,6 @@ object EventHandlers {
     Edit Commands
 
     */
-
     private fun openEditEntity(it: CommandContext<ServerCommandSource>) {
         val entity = it.getEntity("entity")
             .also { if (it is PlayerEntity) throw EntityArgumentType.NOT_ALLOWED_EXCEPTION.create() }
