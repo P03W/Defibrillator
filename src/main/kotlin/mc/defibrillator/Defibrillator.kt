@@ -10,6 +10,7 @@ import com.mojang.brigadier.CommandDispatcher
 import io.github.ladysnake.pal.AbilitySource
 import io.github.ladysnake.pal.Pal
 import kotlinx.coroutines.CoroutineExceptionHandler
+import mc.defibrillator.command.CommandGenerator
 import mc.defibrillator.dimension.EmptyDimension
 import mc.microconfig.MicroConfig
 import me.basiqueevangelist.nevseti.OfflineDataChanged
@@ -23,8 +24,7 @@ import java.util.logging.Logger
 import kotlin.time.ExperimentalTime
 
 class Defibrillator : ModInitializer {
-    @ExperimentalTime
-    @ExperimentalStdlibApi
+    @OptIn(ExperimentalTime::class)
     override fun onInitialize() {
         // Clean up awaits and state on close
         ServerLifecycleEvents.SERVER_STOPPING.register(EventHandlers::onServerClosed)
@@ -40,7 +40,7 @@ class Defibrillator : ModInitializer {
 
         // Main command
         CommandRegistrationCallback.EVENT.register { dispatcher: CommandDispatcher<ServerCommandSource>, _ ->
-            EventHandlers.registerMainCommand(dispatcher)
+            CommandGenerator.registerMainCommand(dispatcher)
         }
 
         // Add dimension
